@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Web dictaphone</title>
+    <link href="app.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <header>
+        <h1>Web dictaphone</h1>
+      </header>
+
+      <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+        <div id="buttons">
+          <button class="record">Запись</button>
+          <button id="listen">Прослушать</button>
+        </div>
+      </section>
+      <button id="success">Продолжить</button>
+      <button id="fail">Пропустить</button>
+      <section class="sound-clips">
+      </section>
+
+    </div>
+    <script src="app.js"></script>
+
+  </body>
+</html>
