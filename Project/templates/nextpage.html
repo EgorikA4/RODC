@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+    <h1>{{ usrtxt.text }}</h1>
+    <h3>{{ usrtxt.emotion }}</h3>
+    <button class="record">Запись</button>
+    <button id="listen">Прослушать</button>
+    <a href="/next/{{ usrtxt.num_text + 1 }}"><button id="success">Продолжить</button></a>
+    <a href="/next/{{ usrtxt.num_text + 1 }}"><button id="fail">Пропустить</button></a>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
+
