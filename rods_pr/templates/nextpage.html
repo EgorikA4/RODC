@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <section class="micro">
+    <div class="container">
+      <div class="title">Web Dictophone</div>
+      <div class="micro__inner">
+        <div class="micro__inputs">
+          <div class="micro__inputs-content">{{ usrtxt.text }}</div>
+          <div class="micro__inputs-content">{{ usrtxt.emotion }}</div>
+        </div>
+        <div class="micro__dictophone">
+          <div class="micro__dictophone-btn">
+            <button class="record">
+              Записать
+            </button>
+          </div>
+          <div class="micro__record">
+            <div class="micro__record-wrap">
+            </div>
+            <div class="micro__record-items">
+              <a href="/next/{{ usrtxt.id_text + 1 }}" class="success">
+                <button>
+                  Продолжить
+                </button>
+              </a>
+              <a href="/next/{{ usrtxt.id_text + 1 }}" class="fail">
+                <button>
+                  Пропустить
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
+
