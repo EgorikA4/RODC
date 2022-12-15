@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/page.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/common_buttons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/submit_button.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/record_button.css') }}" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b16dcfedfd.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+{% endblock %}
+{% block content %}
+  <section class="micro">
+    <div class="container">
+      <div class="title">Web Dictophone</div>
+      <div class="micro__inner">
+        <div class="micro__inputs">
+          <div class="micro__inputs-content">{{ usrtxt.text }}</div>
+          <div class="micro__inputs-content">{{ usrtxt.emotion }}</div>
+        </div>
+        <div class="micro__dictophone">
+          <div class="micro__dictophone-btn">
+            <button type = "record" class = "recording"><i class="fa-solid fa-microphone"></i></button>
+          </div>
+          <div class="micro__record">
+            <div class="micro__record-wrap">
+            </div>
+            <div class="micro__record-items">
+              <a href="/next/{{ usrtxt.id_text + 1 }}" class="success">
+                <button type = "submit"><i class="fa-solid fa-check"></i></button>
+              </a>
+              <a href="/next/{{ usrtxt.id_text + 1 }}" class="fail">
+                <button type = "icon"><i class="fa-solid fa-xmark"></i></button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="{{ url_for('static', filename='js/button.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/record.js') }}"></script>
+{% endblock %}
+
+
