@@ -78,8 +78,47 @@ button[type=submit]:active {
 }
 button[type = submit]::before {
   transition-duration: 0.5s;
-  box-shadow: inset 0 0 0 2.2px #199400;
+  box-shadow: inset 0 0 0 2.2px #4c2f5d;
 }
 button[type = submit]:hover::before {
-  box-shadow: inset 0 0 0 60px #04d800;
+  box-shadow: inset 0 0 0 60px #05a902;
+}
+
+
+button[type = cancel] {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+button[type = cancel] i {
+  position: relative;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+button[type = cancel]::before, button[type = cancel]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.25s ease;
+  border-radius: 30px;
+}
+button[type=cancel]:active {
+  transform: translateY(2px);
+  transition: transform 0.1s;
+}
+button[type = cancel]::before {
+  transition-duration: 0.5s;
+  box-shadow: inset 0 0 0 2.2px #4c2f5d;
+}
+button[type = cancel]:hover::before {
+  box-shadow: inset 0 0 0 60px #ff0000;
 }
