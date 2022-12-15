@@ -30,7 +30,6 @@ Backend часть проекта написана на Python с использ
 ```
 sudo apt get update && upgrade
 pip install flask
-pip install flask_sqlalchemy
 ```
 
 
