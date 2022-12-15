@@ -12,6 +12,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 {% endblock %}
 {% block content %}
+  <section class="block-page">
+    <div class="middle">
+      <h1 class="first-war">Упс....Проверьте включен ли микрофон</h1>
+    </div>
+  </section>
   <section class="micro">
     <div class="container">
       <div class="title">Web Dictophone</div>
@@ -22,16 +27,16 @@
         </div>
         <div class="micro__dictophone">
           <div class="micro__dictophone-btn">
-            <button type = "record" class = "recording"><i class="fa-solid fa-microphone"></i></button>
+            <button type = "record" class = "recording" title="Запись"><i class="fa-solid fa-microphone"></i></button>
           </div>
           <div class="micro__record">
             <div class="micro__record-wrap">
             </div>
             <div class="micro__record-items">
-              <a href="/next/{{ usrtxt.id_text + 1 }}" class="success">
+              <a href="/next/{{ usrtxt.id_text + 1 }}" class="success" title="Продолжить">
                 <button type = "submit"><i class="fa-solid fa-check"></i></button>
               </a>
-              <a href="/next/{{ usrtxt.id_text + 1 }}" class="fail">
+              <a href="/next/{{ usrtxt.id_text + 1 }}" class="fail" title="Пропустить">
                 <button type = "icon"><i class="fa-solid fa-xmark"></i></button>
               </a>
             </div>

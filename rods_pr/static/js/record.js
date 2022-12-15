@@ -6,14 +6,21 @@ const success = document.querySelector('.success');
 
 const fail = document.querySelector('.fail');
 
+
 let audioCtx;
 
 var flag_control_audio = false;
 
+const block_page = document.querySelector('.block-page');
+
+const main_page = document.querySelector('.micro');
+
+main_page.hidden = true;
 
 if (navigator.mediaDevices.getUserMedia) {
   console.log('getUserMedia supported.');
-
+  block_page.hidden = true;
+  main_page.hidden = false;
   const constraints = { audio: true };
   let chunks = [];
 
@@ -25,6 +32,7 @@ if (navigator.mediaDevices.getUserMedia) {
       var $this = $(this);
       if($this.hasClass('recording')) {
         $this.removeClass('recording');
+        $this.attr('title', 'Стоп');
         if(flag_control_audio){
           const get_audio = document.querySelector('.audio_eg');
           audio_block.removeChild(get_audio);
@@ -38,6 +46,7 @@ if (navigator.mediaDevices.getUserMedia) {
       }
       if($this.hasClass('stopped')) {
         $this.removeClass('stopped');
+        $this.attr('title', 'Запись');
         mediaRecorder.stop();
         console.log(mediaRecorder.state);
         console.log("recorder stopped");
@@ -82,6 +91,8 @@ if (navigator.mediaDevices.getUserMedia) {
 
   let onError = function(err) {
     console.log('The following error occured: ' + err);
+    block_page.hidden = false;
+    main_page.hidden = true;
   }
 
   navigator.mediaDevices.getUserMedia(constraints).then(onSuccess, onError);

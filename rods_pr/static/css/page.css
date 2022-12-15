@@ -12,8 +12,10 @@
    overflow-x: hidden;
    font-family: 'Avenir Next Cyr', sans-serif;
 }
+
  html {
    scroll-behavior: smooth;
+   position: relative;
 }
  :after, :before {
    -webkit-box-sizing: border-box;
@@ -122,6 +124,11 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   border: 3px solid #6e305a;
    padding: 5px 20px;
 }
+
+.middle {
+   display: flex;
+   border: 12px;
+}
+
