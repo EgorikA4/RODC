@@ -1,0 +1,155 @@
+@font-face {
+   font-family: 'Avenir Next Cyr';
+   src: url('/static/fonts/AvenirNextCyr-Regular.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+ body {
+   font-size: 16px;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   font-family: "Assistant", sans-serif;
+   overflow: hidden;
+   background: #CFD5E9;
+   background-size: 20px 20px;
+ }
+ 
+ 
+ *, *:before, *:after {
+   box-sizing: border-box;
+ }
+html {
+   scroll-behavior: smooth;
+}
+:after, :before {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+ ul {
+   padding: 0;
+   margin: 0;
+}
+li {
+   list-style: none;
+}
+a {
+   text-decoration: none;
+   color: black;
+}
+ .container {
+   padding: 0 30px;
+   margin: 0 auto;
+}
+ h1, h3, h4, h5, h6 {
+   margin: 0;
+   padding: 20px;
+}
+h2 {
+   margin: 0;
+   padding: 20px;
+   padding-right: 0px;
+}
+ ::-webkit-scrollbar {
+   width: 10px;
+}
+ ::-webkit-scrollbar-track {
+   background-color: #fefefe;
+}
+ ::-webkit-scrollbar-thumb {
+   background-color: #fb1b3d;
+   border-radius: 5px;
+}
+ ::-webkit-scrollbar-thumb:hover {
+   background-color: black;
+}
+ p {
+   margin: 0;
+}
+ input, textarea {
+   outline: none;
+   border: none;
+   resize: none;
+}
+ button {
+   padding: 0;
+   border: none;
+   font: inherit;
+   color: inherit;
+   background-color: transparent;
+   cursor: pointer;
+}
+ .title {
+   margin-top: 60px;
+   font-size: 64px;
+   font-weight: 600;
+   align-items: center;
+   text-align: center;
+}
+ .micro__inner {
+   padding-top: 40px;
+}
+ .micro__inputs {
+   display: flex;
+   justify-content: space-between;
+}
+ .micro__inputs-content {
+   border: 3px solid #6e305a;
+   padding: 30px;
+   overflow: auto;
+   max-width: 800px;
+   height: auto;
+   border-radius: 20px;
+}
+ .micro__inputs-content:first-child {
+   margin-right: 36px;
+}
+ .micro__inputs-content:last-child {
+   margin-right: 0;
+}
+ .micro__text {
+   font-size: 20px;
+   padding-right: 200px;
+}
+ .micro__dictophone {
+   display: flex;
+   align-items: center;
+   margin-top: 36px;
+}
+ .micro__dictophone-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+ .micro__record {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-left: 60px;
+}
+ .micro__record-items {
+   margin-left: 40px;
+}
+ .micro__record-items .micro__btn:first-child {
+   margin-right: 10px;
+}
+ .micro__record-wrap {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border: 3px solid #6e305a;
+   width: 300px;
+   height: 60px;
+   border-radius: 50px;
+}

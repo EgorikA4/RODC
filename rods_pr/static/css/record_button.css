@@ -1,0 +1,64 @@
+  button[type = record] {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-left: 12px;
+    margin-right: 12px;
+    border-radius: 30px;
+    overflow: hidden;
+    color: #FFFFFF;
+
+  }
+  button[type = record] i {
+    position: relative;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+  button[type = record].recording::before, button[type = record].recording::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease;
+    border-radius: 30px;
+    z-index: -1;
+  }
+  button[type=record].recording:active {
+    transform: translateY(2px);
+    transition: transform 0.1s;
+  }
+  button[type=record].recording::before {
+    transition-duration: 0.1s;
+    box-shadow: inset 0 0 0 3px #348200;
+  }
+  button[type=record].recording:hover::before {
+    box-shadow: inset 0 0 0 60px #66d300;
+  }
+
+  button[type = record].stopped::before, button[type = record].stopped::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease;
+    border-radius: 30px;
+  }
+  button[type=record].stopped:active {
+    transform: translateY(2px);
+    transition: transform 0.1s;
+  }
+  button[type=record].stopped::before {
+    transition-duration: 0.1s;
+    box-shadow: inset 0 0 0 3px #920000;
+  }
+  button[type=record].stopped:hover::before {
+    box-shadow: inset 0 0 0 60px #f70f0f;
+  }
+
+  
