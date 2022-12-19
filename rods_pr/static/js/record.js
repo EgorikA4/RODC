@@ -4,6 +4,8 @@ const audio_block = document.querySelector('.micro__record-wrap');
 
 const success = document.querySelector('.success');
 
+const get_id_text = document.querySelector('.id_text').outerText.split('№')[1];
+
 const fail = document.querySelector('.fail');
 
 let audioCtx;
@@ -25,6 +27,7 @@ if (navigator.mediaDevices.getUserMedia) {
       var $this = $(this);
       if($this.hasClass('recording')) {
         $this.removeClass('recording');
+        $this.attr('title', 'Стоп');
         if(flag_control_audio){
           const get_audio = document.querySelector('.audio_eg');
           audio_block.removeChild(get_audio);
@@ -38,6 +41,7 @@ if (navigator.mediaDevices.getUserMedia) {
       }
       if($this.hasClass('stopped')) {
         $this.removeClass('stopped');
+        $this.attr('title', 'Запись');
         mediaRecorder.stop();
         console.log(mediaRecorder.state);
         console.log("recorder stopped");
@@ -64,7 +68,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
       success.onclick = function(){
         save_audio.setAttribute('href', audioURL);
-        save_audio.setAttribute('download', 'test');
+        save_audio.setAttribute('download', get_id_text);
         save_audio.click();
         save_audio.removeAttribute('download');
       }
